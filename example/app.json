@@ -1,0 +1,22 @@
+{
+  "name": "@g01-tecnologia/react-native-virtual-pos-example",
+  "displayName": "ReactNativeVirtualPos Example",
+  "expo": {
+    "name": "@g01-tecnologia/react-native-virtual-pos-example",
+    "slug": "g01-tecnologia-react-native-virtual-pos-example",
+    "description": "Example app for @g01-tecnologia/react-native-virtual-pos",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

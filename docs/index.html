@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@g01-tecnologia/react-native-virtual-pos</title>
-	<meta name="description" content="Documentation for @g01-tecnologia/react-native-virtual-pos">
+	<title>@g01-tecnologia/react-native-pos-print-preview</title>
+	<meta name="description" content="Documentation for @g01-tecnologia/react-native-pos-print-preview">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@g01-tecnologia/react-native-virtual-pos</a>
+					<a href="index.html" class="title">@g01-tecnologia/react-native-pos-print-preview</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -39,8 +39,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -50,7 +48,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>@g01-tecnologia/react-native-virtual-pos</h1>
+			<h1>@g01-tecnologia/react-native-pos-print-preview</h1>
 		</div>
 	</div>
 </header>
@@ -58,23 +56,27 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#g01-tecnologiareact-native-virtual-pos" id="g01-tecnologiareact-native-virtual-pos" style="color: inherit; text-decoration: none;">
-					<h1>@g01-tecnologia/react-native-virtual-pos</h1>
+				<a href="#g01-tecnologiareact-native-pos-print-preview" id="g01-tecnologiareact-native-pos-print-preview" style="color: inherit; text-decoration: none;">
+					<h1>@g01-tecnologia/react-native-pos-print-preview</h1>
 				</a>
 				<p>Virtual view that simulates a POS printer.</p>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
 				</a>
-				<pre><code class="language-sh"><span style="color: #000000">npm install @g01-tecnologia/react-native-virtual-pos</span>
+				<pre><code class="language-sh"><span style="color: #000000">npm install @g01-tecnologia/react-native-pos-print-preview</span>
+<span style="color: #008000"># or</span>
+<span style="color: #000000">yarn add @g01-tecnologia/react-native-pos-print-preview</span>
 </code></pre>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">ReactNativeVirtualPos</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@g01-tecnologia/react-native-virtual-pos&quot;</span><span style="color: #000000">;</span>
+				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">VirtualPOS</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@g01-tecnologia/react-native-pos-print-preview&#039;</span><span style="color: #000000">;</span>
 
-<span style="color: #008000">// ...</span>
+<span style="color: #008000">//...</span>
 
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">ReactNativeVirtualPos</span><span style="color: #000000">.</span><span style="color: #795E26">multiply</span><span style="color: #000000">(</span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">7</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> [</span><span style="color: #0070C1">commands</span><span style="color: #000000">, </span><span style="color: #0070C1">setCommands</span><span style="color: #000000">] = </span><span style="color: #795E26">useState</span><span style="color: #000000">([{ </span><span style="color: #001080">cmd:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">prn:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;Hello POS!&#039;</span><span style="color: #000000"> }]);</span>
+
+<span style="color: #AF00DB">return</span><span style="color: #000000"> &lt;</span><span style="color: #267F99">VirtualPOS</span><span style="color: #000000"> </span><span style="color: #267F99">data</span><span style="color: #000000">={</span><span style="color: #001080">commands</span><span style="color: #000000">} /&gt;;</span>
 </code></pre>
 				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
 					<h2>Contributing</h2>
@@ -93,16 +95,13 @@
 						<a href="modules.html">Modules</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/_types_types.html">@types/types</a>
+						<a href="modules/Main_Parser_and_Internal_Workings.html">Main <wbr>Parser and <wbr>Internal <wbr>Workings</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/index.html">index</a>
+						<a href="modules/Types_and_Interfaces.html">Types and <wbr>Interfaces</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/styles.html">styles</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/utils_stylesheetUtils.html">utils/stylesheet<wbr>Utils</a>
+						<a href="modules/VirtualPosPreview_Component.html">Virtual<wbr>Pos<wbr>Preview <wbr>Component</a>
 					</li>
 				</ul>
 			</nav>

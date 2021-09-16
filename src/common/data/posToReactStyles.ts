@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native';
 import { POSToReact } from 'src/@types/types';
 
+/**
+ * @internal
+ */
 const styles = StyleSheet.create({
   bold: { fontWeight: 'bold' },
   alignCenter: { textAlign: 'center' },
@@ -14,6 +17,7 @@ const styles = StyleSheet.create({
 /**
  * Table to convert POS styles to React styles.
  * @type {POSToReact}
+ * @internal
  */
 export const posToReactStyles: POSToReact = {
   '\u001b\u0061\u0001': styles.alignCenter, // ALIGN_CENTER

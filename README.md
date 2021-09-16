@@ -1,21 +1,25 @@
-# @g01-tecnologia/react-native-virtual-pos
+# @g01-tecnologia/react-native-pos-print-preview
 
 Virtual view that simulates a POS printer.
 
 ## Installation
 
 ```sh
-npm install @g01-tecnologia/react-native-virtual-pos
+npm install @g01-tecnologia/react-native-pos-print-preview
+# or
+yarn add @g01-tecnologia/react-native-pos-print-preview
 ```
 
 ## Usage
 
-```js
-import ReactNativeVirtualPos from "@g01-tecnologia/react-native-virtual-pos";
+```typescript
+import VirtualPOS from '@g01-tecnologia/react-native-pos-print-preview';
 
-// ...
+//...
 
-const result = await ReactNativeVirtualPos.multiply(3, 7);
+const [commands, setCommands] = useState([{ cmd: null, prn: 'Hello POS!' }]);
+
+return <VirtualPOS data={commands} />;
 ```
 
 ## Contributing

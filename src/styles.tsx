@@ -3,7 +3,7 @@ import { normalize } from './utils/stylesheetUtils';
 
 /**
  * @internal
- * @ignore
+ * @hidden
  */
 const styles = StyleSheet.create({
   container: {
@@ -60,20 +60,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff9c7',
     padding: normalize(15),
   },
+  alignRight: { textAlign: 'right' },
   virtualPOSContainer: {
-    flex: 1,
     width: '100%',
   },
-
   divider: {
     borderBottomColor: 'black',
     borderBottomWidth: 1,
   },
-  bold: { fontWeight: 'bold' },
-  alignCenter: { textAlign: 'center' },
-  alignLeft: { textAlign: 'left' },
-  alignRight: { textAlign: 'right' },
-  jumpLine: {},
+  row: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+  },
 });
 
 export default styles;

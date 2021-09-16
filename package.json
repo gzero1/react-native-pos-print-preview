@@ -1,6 +1,6 @@
 {
   "name": "@g01-tecnologia/react-native-pos-print-preview",
-  "version": "0.0.1-alpha",
+  "version": "0.1.0-beta",
   "description": "Virtual view that simulates a POS printer.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -29,7 +29,8 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods"
+    "bootstrap": "yarn example && yarn && yarn pods",
+    "document": "npx typedoc --options ./typedoc.js src/"
   },
   "keywords": [
     "react-native",

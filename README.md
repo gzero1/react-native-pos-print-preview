@@ -1,6 +1,7 @@
 # @g01-tecnologia/react-native-pos-print-preview
 
 Virtual view that simulates a POS printer.
+_This is a work in progress currently in beta state._
 
 ## Installation
 

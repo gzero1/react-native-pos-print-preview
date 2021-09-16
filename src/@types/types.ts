@@ -2,7 +2,7 @@
  * @module Types and Interfaces
  */
 
-import { ComponentType } from 'react';
+import React from 'react';
 import { ViewStyle, TextStyle, ScrollViewProps } from 'react-native';
 
 export type RootStyles = ViewStyle & TextStyle;
@@ -21,12 +21,13 @@ export interface POSToReact {
   [key: string]: RootStyles;
 }
 
-export interface VirtualPOSProps<T> extends Omit<ScrollViewProps, 'children'> {
+export interface VirtualPOSProps<T extends React.ElementType>
+  extends Omit<ScrollViewProps, 'children'> {
   children?: never;
   data: RawPOSData[];
   customInternalView?: {
-    component: ComponentType;
-    props?: T;
+    component: T;
+    props?: React.ComponentProps<T>;
   };
   customStyles?: {
     textStyle?: TextStyle;

@@ -1,7 +1,7 @@
 /**
  * @module VirtualPosPreview Component
  */
-import React from 'react';
+import React, { ComponentType } from 'react';
 import styles from './styles';
 import { ScrollView, Text, View } from 'react-native';
 
@@ -25,7 +25,7 @@ import { reactifyCommands } from './functions/printer';
  * @returns ``ReactComponent`` The main react component
  */
 
-const VirtualPOSPreview = <T extends unknown>({
+const VirtualPOSPreview = <T extends React.ElementType>({
   data,
   customStyles,
   ...props
@@ -33,7 +33,9 @@ const VirtualPOSPreview = <T extends unknown>({
   const commands = reactifyCommands(data);
   const { style, ...propsWithoutStyle } = props;
 
-  const CustomComponent = propsWithoutStyle.customInternalView?.component;
+  const CustomComponent = propsWithoutStyle.customInternalView?.component as
+    | ComponentType
+    | undefined;
 
   const renderList = () => {
     return (
@@ -51,7 +53,7 @@ const VirtualPOSPreview = <T extends unknown>({
                     customStyles?.textStyle || styles.text,
                   ]}
                 >
-                  {POSData.text}
+                  {POSData.text.trim()}
                 </Text>
                 <Text
                   style={[
@@ -60,7 +62,7 @@ const VirtualPOSPreview = <T extends unknown>({
                     customStyles?.textStyle || styles.text,
                   ]}
                 >
-                  {array[index + 1].text}
+                  {array[index + 1].text.trim()}
                 </Text>
               </View>
             );

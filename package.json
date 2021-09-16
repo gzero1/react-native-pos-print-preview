@@ -1,6 +1,6 @@
 {
   "name": "@g01-tecnologia/react-native-pos-print-preview",
-  "version": "0.2.0-beta",
+  "version": "0.2.1-beta",
   "description": "Virtual view that simulates a POS printer.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",

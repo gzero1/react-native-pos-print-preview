@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, Text, View } from 'react-native';
+// @ts-ignore
 import VirtualPosPreview from '@g01-tecnologia/react-native-pos-print-preview';
 import placeholderData from './common/data/placeholderData.json';
 

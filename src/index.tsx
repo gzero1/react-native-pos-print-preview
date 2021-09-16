@@ -32,8 +32,7 @@ const VirtualPOSPreview = <T extends unknown>({
 }: VirtualPOSProps<T>) => {
   const commands = reactifyCommands(data);
   const { style, ...propsWithoutStyle } = props;
-  // console.log(propsWithoutStyle.customInternalView?.component);
-  // console.log(!!propsWithoutStyle.customInternalView?.component);
+
   const CustomComponent = propsWithoutStyle.customInternalView?.component;
 
   const renderList = () => {

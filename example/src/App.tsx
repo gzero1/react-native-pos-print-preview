@@ -9,7 +9,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Virtual Pos Test</Text>
-      <VirtualPosPreview data={placeholderData} />
+      <VirtualPosPreview
+        customInternalView={{
+          component: View,
+          props: {},
+        }}
+        data={placeholderData}
+      />
       <Text>Virtual Pos</Text>
     </View>
   );

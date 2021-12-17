@@ -1,62 +1,268 @@
 [
-  { "cmd": "0x1B,0x40", "prn": null },
-  { "cmd": "0x1B,0x44,0x14,0x01,0x00", "prn": null },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x1B,0x61,0x01", "prn": null },
-  { "cmd": "0x1D,0x21,0x00", "prn": null },
-  { "cmd": "0x1B,0x45,0x01", "prn": null },
-  { "cmd": null, "prn": "COMPROVANTE" },
-  { "cmd": "0x1B,0x45,0x00", "prn": null },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x1B,0x61,0x01", "prn": null },
-  { "cmd": "0x1D,0x21,0x00", "prn": null },
-  { "cmd": null, "prn": "12/09/2021" },
-  { "cmd": "0x1D,0x21,0x00", "prn": null },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": null, "prn": "--------------------------------" },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x1B,0x61,0x00", "prn": null },
-  { "cmd": null, "prn": "Saldo Atual" },
-  { "cmd": "0x09", "prn": null },
-  { "cmd": null, "prn": "  -3.359,23" },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": null, "prn": "--------------------------------" },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x1B,0x61,0x01", "prn": null },
-  { "cmd": "0x1B,0x45,0x01", "prn": null },
-  { "cmd": null, "prn": "CREDITOS" },
-  { "cmd": "0x1B,0x45,0x00", "prn": null },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x1B,0x61,0x00", "prn": null },
-  { "cmd": null, "prn": "Pagou Dinheiro" },
-  { "cmd": "0x09", "prn": null },
-  { "cmd": null, "prn": "       0,00" },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x1B,0x61,0x00", "prn": null },
-  { "cmd": null, "prn": "Pagou Cartao" },
-  { "cmd": "0x09", "prn": null },
-  { "cmd": null, "prn": "       0,00" },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x1B,0x61,0x00", "prn": null },
-  { "cmd": null, "prn": "Folha" },
-  { "cmd": "0x09", "prn": null },
-  { "cmd": null, "prn": "  12.345,78" },
-  { "cmd": "0x1B,0x45,0x00", "prn": null },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x1B,0x61,0x00", "prn": null },
-  { "cmd": null, "prn": "Pmgnt." },
-  { "cmd": "0x09", "prn": null },
-  { "cmd": null, "prn": "  12.345,78" },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": "0x1B,0x61,0x00", "prn": null },
-  { "cmd": null, "prn": "Saldo Anterior" },
-  { "cmd": "0x09", "prn": null },
-  { "cmd": null, "prn": " -99.999,99" },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": null, "prn": "--------------------------------" },
-  { "cmd": "0x0A", "prn": null },
-  { "cmd": null, "prn": "Emissao: 14/09/2021 10:22" },
-  { "cmd": "0x0A", "prn": null }
+  {
+    "cmd": "0x1d,0x21,0x0",
+    "prn": null
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "--------------------------------"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1b,0x61,0x1",
+    "prn": null
+  },
+  {
+    "cmd": "0x1d,0x21,0x1",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "%empresa%"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1b,0x61,0x0",
+    "prn": null
+  },
+  {
+    "cmd": "0x1d,0x21,0x0",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "--------------------------------"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1d,0x21,0x1",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "Codigo:      XX 66666"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x0",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "Pedido:      0"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1d,0x21,0x1",
+    "prn": null
+  },
+  {
+    "cmd": "0x0",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "Vale p/:"
+  },
+  {
+    "cmd": null,
+    "prn": "     31/12/1969"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x0",
+    "prn": null
+  },
+  {
+    "cmd": "0x1d,0x21,0x0",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "--------------------------------"
+  },
+
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1d,0x21,0x0",
+    "prn": null
+  },
+  {
+    "cmd": "0x1d,0x21,0x11",
+    "prn": null
+  },
+  {
+    "cmd": "0x1b,0x61,0x0",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "Jogo Passe-1 ao 5 N1"
+  },
+  {
+    "cmd": "0x1d,0x21,0x0",
+    "prn": null
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1b,0x61,0x2",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "25 - 25"
+  },
+  {
+    "cmd": "0x1d,0x21,0x0",
+    "prn": null
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x9",
+    "prn": null
+  },
+  {
+    "cmd": "0x1b,0x61,0x2",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "R$ 10,00"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1d,0x21,0x0",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "--------------------------------"
+  },
+  {
+    "cmd": "0x1d,0x21,0x0",
+    "prn": null
+  },
+  {
+    "cmd": "0x1b,0x61,0x0",
+    "prn": null
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1d,0x21,0x11",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "TOTAL: 10,00"
+  },
+
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1b,0x61,0x0",
+    "prn": null
+  },
+  {
+    "cmd": "0x1d,0x21,0x0",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "--------------------------------"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1b,0x61,0x0",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "Data: 17:43 17/12/2021\n"
+  },
+  {
+    "cmd": null,
+    "prn": "Tran :       V.: 3.0.4-alpha"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1b,0x61,0x0",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "00000000\n"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0x1b,0x61,0x1",
+    "prn": null
+  },
+  {
+    "cmd": null,
+    "prn": "Favor conferir sua aposta\nPaga o que esta impresso\n/// 3 dias para reclamar ///"
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  },
+  {
+    "cmd": "0xa",
+    "prn": null
+  }
 ]

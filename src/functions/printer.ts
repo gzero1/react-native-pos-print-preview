@@ -32,23 +32,19 @@ export const reactifyCommands = (commandArr: RawPOSData[]): ReactPOSData[] => {
     // Example: ['0x1b', '0x20', null, '0x20', '0x3b' null]
     // gets transformed to
     // [['0x1b', '0x20'], ['0x20', '0x3b']]
-    .reduce((previous, current, index) => {
-      return current !== null && index > 0
-        ? [...previous, [current, previous[index - 1]].flat()]
-        : [...previous, null];
-    }, [] as ((string | null)[] | null)[])
-    .reduce((previous, current, index, array) => {
-      return current === null && index > 0
-        ? [...previous, array[index - 1]!]
-        : [...previous, null];
-    }, [] as ((string | null)[] | null)[])
-    // The following map and filter just excludes any leftover
-    // null value even from a nested array.
-    .filter(<T>(command: T | null): command is T => command !== null)
-    .map((commands) =>
-      commands.filter(<T>(command: T | null): command is T => command !== null)
-    )
-    // Converts commands such as '0x0A' to React Native stylesheet such as {flex: 1}
+    .map((value) => (value === null ? 'null' : value))
+    .join('-')
+    .split('null')
+    .map((value) => value.split('-'))
+    // .filter((command) => !command.every((value) => value.length === 0))
+    // .map((command) => command.filter((style) => style.length > 0))
+    // // The following map and filter just excludes any leftover
+    // // null value even from a nested array.
+    // .filter(<T>(command: T | null): command is T => command !== null)
+    // .map((commands) =>
+    //   commands.filter(<T>(command: T | null): command is T => command !== null)
+    // )
+    // // Converts commands such as '0x0A' to React Native stylesheet such as {flex: 1}
     .map((styleArr) =>
       styleArr.map((style) => {
         return parseBufferStyle(
@@ -56,7 +52,6 @@ export const reactifyCommands = (commandArr: RawPOSData[]): ReactPOSData[] => {
         );
       })
     );
-
   // Returns an array of objects with styles and text together
   // that is easily convertable to Text tags.
   // E.g.: [{styles: [{flex: 1}, {marginBottom: 3}], text: 'Hello World!'}]

@@ -44,7 +44,7 @@ const VirtualPOSPreview = <T extends React.ElementType>({
           // Special formatting cases such as divider or same line command.
           if (POSData.text.match(/^[-]+/g)) {
             return <View key={`divider_${index}`} style={styles.divider} />;
-          } else if (array[index + 1]?.text.match(/^[ ]/g)) {
+          } else if (!POSData?.text.match(/^[ ]/g) && array[index + 1]?.text.match(/^[ ]/g)) {
             return (
               <View key={`sameline_${index}`} style={styles.row}>
                 <Text
@@ -66,6 +66,19 @@ const VirtualPOSPreview = <T extends React.ElementType>({
                 </Text>
               </View>
             );
+          } else if (POSData?.text.match(/^[ ]/g)) {
+            if (array[index - 1]?.text.match(/^[ ]/g)) {
+              return <Text
+                  key={`postext_${index}`}
+                  style={[
+                    POSData.styles,
+                    styles.alignRight,
+                    customStyles?.textStyle || styles.text,
+                  ]}
+                >
+              {POSData.text.trim()}
+            </Text>
+            }
           }
 
           return (
